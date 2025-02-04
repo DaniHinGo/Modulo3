@@ -9,3 +9,4 @@ C:\modulo_3\Tesla.testing\obj\Debug\net9.0\Tesla.testing.dll
 C:\modulo_3\Tesla.testing\obj\Debug\net9.0\refint\Tesla.testing.dll
 C:\modulo_3\Tesla.testing\obj\Debug\net9.0\Tesla.testing.pdb
 C:\modulo_3\Tesla.testing\obj\Debug\net9.0\ref\Tesla.testing.dll
+C:\modulo_3\Tesla.testing\obj\Debug\net9.0\Tesla.testing.sourcelink.json

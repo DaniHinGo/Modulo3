@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\modulo_3\\tesla.api\\Tesla.API.csproj": {}
+    "C:\\modulo_3\\Tesla.API\\Tesla.API.csproj": {}
   },
   "projects": {
-    "C:\\modulo_3\\tesla.api\\Tesla.API.csproj": {
+    "C:\\modulo_3\\Tesla.API\\Tesla.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\modulo_3\\tesla.api\\Tesla.API.csproj",
+        "projectUniqueName": "C:\\modulo_3\\Tesla.API\\Tesla.API.csproj",
         "projectName": "Tesla.API",
-        "projectPath": "C:\\modulo_3\\tesla.api\\Tesla.API.csproj",
+        "projectPath": "C:\\modulo_3\\Tesla.API\\Tesla.API.csproj",
         "packagesPath": "C:\\Users\\DaniHinGo\\.nuget\\packages\\",
-        "outputPath": "C:\\modulo_3\\tesla.api\\obj\\",
+        "outputPath": "C:\\modulo_3\\Tesla.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DaniHinGo\\AppData\\Roaming\\NuGet\\NuGet.Config"

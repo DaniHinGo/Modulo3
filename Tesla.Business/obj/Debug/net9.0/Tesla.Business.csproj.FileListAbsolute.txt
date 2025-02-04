@@ -13,3 +13,4 @@ C:\modulo_3\Tesla.Business\obj\Debug\net9.0\Tesla.Business.dll
 C:\modulo_3\Tesla.Business\obj\Debug\net9.0\refint\Tesla.Business.dll
 C:\modulo_3\Tesla.Business\obj\Debug\net9.0\Tesla.Business.pdb
 C:\modulo_3\Tesla.Business\obj\Debug\net9.0\ref\Tesla.Business.dll
+C:\modulo_3\Tesla.Business\obj\Debug\net9.0\Tesla.Business.sourcelink.json

@@ -252,3 +252,4 @@ C:\modulo_3\Tesla.API\obj\Debug\net9.0\refint\Tesla.API.dll
 C:\modulo_3\Tesla.API\obj\Debug\net9.0\Tesla.API.pdb
 C:\modulo_3\Tesla.API\obj\Debug\net9.0\Tesla.API.genruntimeconfig.cache
 C:\modulo_3\Tesla.API\obj\Debug\net9.0\ref\Tesla.API.dll
+C:\modulo_3\Tesla.API\obj\Debug\net9.0\Tesla.API.sourcelink.json
