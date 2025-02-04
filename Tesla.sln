@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tesla.API", "Tesla.API\Tesla.API.csproj", "{AA0995F6-A210-4B25-8888-4B1C8BE761F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tesla.Business", "Tesla.Business\Tesla.Business.csproj", "{22B6D746-CC38-4A6F-AC80-A99FE40E5AA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tesla.Data", "Tesla.Data\Tesla.Data.csproj", "{37085823-FB26-474D-B7C8-4FD28606B8C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tesla.testing", "Tesla.testing\Tesla.testing.csproj", "{DE99BC01-7EE3-4986-B179-B354B50F38B0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA0995F6-A210-4B25-8888-4B1C8BE761F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA0995F6-A210-4B25-8888-4B1C8BE761F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA0995F6-A210-4B25-8888-4B1C8BE761F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA0995F6-A210-4B25-8888-4B1C8BE761F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22B6D746-CC38-4A6F-AC80-A99FE40E5AA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22B6D746-CC38-4A6F-AC80-A99FE40E5AA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22B6D746-CC38-4A6F-AC80-A99FE40E5AA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22B6D746-CC38-4A6F-AC80-A99FE40E5AA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37085823-FB26-474D-B7C8-4FD28606B8C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37085823-FB26-474D-B7C8-4FD28606B8C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37085823-FB26-474D-B7C8-4FD28606B8C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37085823-FB26-474D-B7C8-4FD28606B8C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE99BC01-7EE3-4986-B179-B354B50F38B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE99BC01-7EE3-4986-B179-B354B50F38B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE99BC01-7EE3-4986-B179-B354B50F38B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE99BC01-7EE3-4986-B179-B354B50F38B0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

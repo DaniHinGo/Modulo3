@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "5TtUFv5ydAijkASwK2Y+7nFqj0FxqjmBK1eodvnkPM0=",
+  "Source": "Tesla.API",
+  "BasePath": "_content/Tesla.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

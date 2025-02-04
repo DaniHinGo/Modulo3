@@ -1,0 +1,15 @@
+C:\modulo_3\Tesla.Business\bin\Debug\net9.0\Tesla.Business.deps.json
+C:\modulo_3\Tesla.Business\bin\Debug\net9.0\Tesla.Business.dll
+C:\modulo_3\Tesla.Business\bin\Debug\net9.0\Tesla.Business.pdb
+C:\modulo_3\Tesla.Business\bin\Debug\net9.0\Tesla.Data.dll
+C:\modulo_3\Tesla.Business\bin\Debug\net9.0\Tesla.Data.pdb
+C:\modulo_3\Tesla.Business\obj\Debug\net9.0\Tesla.Business.csproj.AssemblyReference.cache
+C:\modulo_3\Tesla.Business\obj\Debug\net9.0\Tesla.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\modulo_3\Tesla.Business\obj\Debug\net9.0\Tesla.Business.AssemblyInfoInputs.cache
+C:\modulo_3\Tesla.Business\obj\Debug\net9.0\Tesla.Business.AssemblyInfo.cs
+C:\modulo_3\Tesla.Business\obj\Debug\net9.0\Tesla.Business.csproj.CoreCompileInputs.cache
+C:\modulo_3\Tesla.Business\obj\Debug\net9.0\Tesla.Bu.D38131A1.Up2Date
+C:\modulo_3\Tesla.Business\obj\Debug\net9.0\Tesla.Business.dll
+C:\modulo_3\Tesla.Business\obj\Debug\net9.0\refint\Tesla.Business.dll
+C:\modulo_3\Tesla.Business\obj\Debug\net9.0\Tesla.Business.pdb
+C:\modulo_3\Tesla.Business\obj\Debug\net9.0\ref\Tesla.Business.dll
