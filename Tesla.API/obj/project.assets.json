@@ -6357,6 +6357,7 @@
   "projectFileDependencyGroups": {
     "net9.0": [
       "Microsoft.AspNetCore.OpenApi >= 9.0.0",
+      "Microsoft.EntityFrameWorkCore >= 9.0.1",
       "Microsoft.EntityFrameWorkCore.Design >= 9.0.1",
       "Microsoft.EntityFrameWorkCore.Tools >= 9.0.1",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 9.0.0",
@@ -6418,6 +6419,10 @@
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[9.0.0, )"
+          },
+          "Microsoft.EntityFrameWorkCore": {
+            "target": "Package",
+            "version": "[9.0.1, )"
           },
           "Microsoft.EntityFrameWorkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",

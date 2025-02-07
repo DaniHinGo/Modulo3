@@ -3,7 +3,7 @@ using Tesla.Business.Interfaces;
 
 namespace Tesla.Controllers;
 
-[Controller]
+[ApiController]
 [Route("api/[controller]")]
 public class ArtistController : ControllerBase
 {

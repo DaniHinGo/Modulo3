@@ -1,10 +1,3 @@
-C:\modulo_3\Tesla.API\obj\Debug\net9.0\Tesla.API.csproj.AssemblyReference.cache
-C:\modulo_3\Tesla.API\obj\Debug\net9.0\Tesla.API.GeneratedMSBuildEditorConfig.editorconfig
-C:\modulo_3\Tesla.API\obj\Debug\net9.0\Tesla.API.AssemblyInfoInputs.cache
-C:\modulo_3\Tesla.API\obj\Debug\net9.0\Tesla.API.AssemblyInfo.cs
-C:\modulo_3\Tesla.API\obj\Debug\net9.0\Tesla.API.csproj.CoreCompileInputs.cache
-C:\modulo_3\Tesla.API\obj\Debug\net9.0\Tesla.API.MvcApplicationPartsAssemblyInfo.cs
-C:\modulo_3\Tesla.API\obj\Debug\net9.0\Tesla.API.MvcApplicationPartsAssemblyInfo.cache
 C:\modulo_3\Tesla.API\bin\Debug\net9.0\appsettings.Development.json
 C:\modulo_3\Tesla.API\bin\Debug\net9.0\appsettings.json
 C:\modulo_3\Tesla.API\bin\Debug\net9.0\Tesla.API.staticwebassets.endpoints.json
@@ -236,6 +229,14 @@ C:\modulo_3\Tesla.API\bin\Debug\net9.0\Tesla.Business.dll
 C:\modulo_3\Tesla.API\bin\Debug\net9.0\Tesla.Data.dll
 C:\modulo_3\Tesla.API\bin\Debug\net9.0\Tesla.Business.pdb
 C:\modulo_3\Tesla.API\bin\Debug\net9.0\Tesla.Data.pdb
+C:\modulo_3\Tesla.API\obj\Debug\net9.0\Tesla.API.csproj.AssemblyReference.cache
+C:\modulo_3\Tesla.API\obj\Debug\net9.0\Tesla.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\modulo_3\Tesla.API\obj\Debug\net9.0\Tesla.API.AssemblyInfoInputs.cache
+C:\modulo_3\Tesla.API\obj\Debug\net9.0\Tesla.API.AssemblyInfo.cs
+C:\modulo_3\Tesla.API\obj\Debug\net9.0\Tesla.API.csproj.CoreCompileInputs.cache
+C:\modulo_3\Tesla.API\obj\Debug\net9.0\Tesla.API.MvcApplicationPartsAssemblyInfo.cs
+C:\modulo_3\Tesla.API\obj\Debug\net9.0\Tesla.API.MvcApplicationPartsAssemblyInfo.cache
+C:\modulo_3\Tesla.API\obj\Debug\net9.0\Tesla.API.sourcelink.json
 C:\modulo_3\Tesla.API\obj\Debug\net9.0\scopedcss\bundle\Tesla.API.styles.css
 C:\modulo_3\Tesla.API\obj\Debug\net9.0\staticwebassets.build.json
 C:\modulo_3\Tesla.API\obj\Debug\net9.0\staticwebassets.development.json
@@ -252,4 +253,3 @@ C:\modulo_3\Tesla.API\obj\Debug\net9.0\refint\Tesla.API.dll
 C:\modulo_3\Tesla.API\obj\Debug\net9.0\Tesla.API.pdb
 C:\modulo_3\Tesla.API\obj\Debug\net9.0\Tesla.API.genruntimeconfig.cache
 C:\modulo_3\Tesla.API\obj\Debug\net9.0\ref\Tesla.API.dll
-C:\modulo_3\Tesla.API\obj\Debug\net9.0\Tesla.API.sourcelink.json

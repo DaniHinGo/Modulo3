@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameWorkCore" Version="9.0.1" />
     <PackageReference Include="Microsoft.EntityFrameWorkCore.Design" Version="9.0.1">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
@@ -22,7 +23,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Tesla.Business\Tesla.Business.csproj" />
-    <ProjectReference Include="..\Tesla.Data\Tesla.Data.csproj" />
+    <ProjectReference Include="..\Tesla.Data\Tesla.Data.csproj"></ProjectReference>
   </ItemGroup>
 
 </Project>

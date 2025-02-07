@@ -4,94 +4,41 @@ using Tesla.Data.Models;
 using System.Net;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
+using System.Runtime.InteropServices;
+using Tesla.Data.IRepository;
+using Npgsql;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Tesla.Data.Repositoty;
 
 namespace Tesla.Business.Services;
 
 public class AlbumService : IAlbumService
 {
+    private IAlbumRepository<int, Album> _albumRepository;
     private List<Album> _listaAlbum = new();
-    public AlbumService()
+    public AlbumService(IAlbumRepository<int, Album> albumRepository)
     {
-       _listaAlbum.Add(new ()
-       {
-            Name = "Ni un paso atrás",
-            Gender = Gender.Punk_rock,
-            Year = 1991,
-            Id = 1,
-            Artist = new() { Id = 0, Name = "Reincidentes", Label = "Discos Suicidas", IsOnTour = false }
-       });
-       _listaAlbum.Add(new ()
-       {
-            Name = "Dejenme ser",
-            Gender = Gender.Rock,
-            Year = 2002,
-            Id = 2,
-            Artist = new() { Id = 0, Name = "Código Rojo", Label = "Universal Music", IsOnTour = false }
-       });
-       _listaAlbum.Add(new ()
-       {
-            Name = "Con todo respeto",
-            Gender = Gender.Rock,
-            Year = 2004,
-            Id = 3,
-            Artist = new() { Id = 0, Name = "Molotov", Label = "Universal", IsOnTour = false }
-       });
-       _listaAlbum.Add(new ()
-       {
-            Name = "Poetics",
-            Gender = Gender.Rock_alternatico,
-            Year = 2009,
-            Id = 4,
-            Artist = new() { Id = 0, Name = "Panda", Label = "Movic Records", IsOnTour = true }
-       });
-       _listaAlbum.Add(new ()
-       {
-            Name = "Finisterra",
-            Gender = Gender.Folk_Metal,
-            Year = 2000,
-            Id = 5,
-            Artist = new() { Id = 0, Name = "Mago de Oz", Label = "	Locomotive Music", IsOnTour = true }
-       });
-       _listaAlbum.Add(new ()
-       {
-            Name = "Viaje por lo eterno",
-            Gender = Gender.Rock,
-            Year = 2014,
-            Id = 6,
-            Artist = new() { Id = 0, Name = "Reyno", Label = "Universal Music", IsOnTour = true }
-       });
-       _listaAlbum.Add(new ()
-       {
-            Name = "Piel de cobre",
-            Gender = Gender.Hard_rock,
-            Year = 1993,
-            Id = 7,
-            Artist = new() { Id = 0, Name = "Kraken", Label = "Discos fuentes", IsOnTour = false }
-       });
-       _listaAlbum.Add(new ()
-       {
-            Name = "Firmes",
-            Gender = Gender.Punk,
-            Year = 2009,
-            Id = 8,
-            Artist = new() { Id = 0, Name = "I.R.A", Label = "Universal Music", IsOnTour = false }
-       });
-       _listaAlbum.Add(new ()
-       {
-            Name = "Navegantes",
-            Gender = Gender.Synthpop,
-            Year = 2019,
-            Id = 9,
-            Artist = new() { Id = 0, Name = "Camilo Séptimo", Label = "	Warner Chappell Music", IsOnTour = true }
-       });       
+        _albumRepository = albumRepository;
+        //_albumRepository = new AlbumRepository<int, Album>(_context);
     }
-    public async Task<BaseMessage<Album>> AddAlbum()
+
+    public async Task<BaseMessage<Album>> AddAlbum(Album album)
     {
+        var isValid = ValidateModel(album);
+        if(string.IsNullOrEmpty(isValid))
+        {
+            return BuildResponse(null, isValid, HttpStatusCode.BadRequest, new());
+        }
+
         try{
-            _listaAlbum.Add(new (){Name = "Sunrise Over Rigor Mortis", Gender = Gender.Rock, Year = 2024, Id = 4});
-        }catch{
+            //var result = await _alb
+            await _albumRepository.AddAsync(album);
+        }
+        catch(Exception ex)
+        {
             return new BaseMessage<Album>() {
-                Message = "",
+                Message = $"[Exception]: {ex.Message}",
                 StatusCode = System.Net.HttpStatusCode.InternalServerError,
                 TotalElements = 0,
                 ResponseElements = new ()
@@ -102,8 +49,8 @@ public class AlbumService : IAlbumService
         return new BaseMessage<Album>() {
             Message = "",
             StatusCode = System.Net.HttpStatusCode.OK,
-            TotalElements = _listaAlbum.Count,
-            ResponseElements = _listaAlbum
+            TotalElements = 1,
+            ResponseElements = new List<Album>{album}
         };
         
     }
@@ -146,15 +93,26 @@ public class AlbumService : IAlbumService
 
     public async Task<BaseMessage<Album>> GetList()
     {
+        var lista = await _albumRepository.GetAllAsync();
+
+        foreach (var item in lista)
+        {
+            Console.WriteLine(item.Name);
+            Console.WriteLine(item.Year);
+            Console.WriteLine(item.Genre);
+            Console.WriteLine(item.ArtistId);
+            Console.WriteLine(item.Artist?.Name);
+
+        }
         return new BaseMessage<Album>() {
             Message = "",
             StatusCode = System.Net.HttpStatusCode.OK,
-            TotalElements = _listaAlbum.Count,
-            ResponseElements = _listaAlbum
+            TotalElements = lista.Count(),
+            ResponseElements = lista.ToList()
         };
     }
 
-    
+   
 
     private BaseMessage<Album> BuildResponse(List<Album> lista, string message = "", HttpStatusCode status = HttpStatusCode.OK, 
         int totalElements = 0)
@@ -166,4 +124,43 @@ public class AlbumService : IAlbumService
             ResponseElements = lista
         };
     }
+
+    private string ValidateModel(Album album){
+        string message = string.Empty;
+
+        if(string.IsNullOrEmpty(album.Name))
+        {
+            message += "El nombre es requerido";
+        }
+        if(album.Year < 1901 || album.Year > DateAndTime.Now.Year)
+        {
+            message += "El año del disco debe estar entre 1901 y 2025";
+        }
+
+        return message;
+    }
+
+#region Learning to TEst
+    public async Task<string> HealthCheckTest()
+    {
+        return "OK";
+    }
+
+    public async Task<string> HealthCheckTest(bool IsOK)
+    {
+        return IsOK ? "OK!" : "Not cool";
+    }
+
+    public async Task<string> TestAlbumCreation(Album album)
+    {
+        return ValidateModel(album);
+    }
+
+    public Task<BaseMessage<Album>> AddAlbum()
+    {
+        throw new NotImplementedException();
+    }
+    #endregion
+
+
 }
