@@ -1,13 +1,14 @@
 using Microsoft.AspNetCore.Mvc;
 using Tesla.Business.Interfaces;
 
-namespace Tesla.Controllers;
+namespace TeslaACDC.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
 public class ArtistController : ControllerBase
 {
     private readonly IArtistService _artistService;
+
     public ArtistController(IArtistService artistService)
     {
         _artistService = artistService;

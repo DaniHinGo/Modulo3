@@ -18,7 +18,7 @@ public class TeslaController : ControllerBase
     }
 
     [HttpGet]
-    [Route("GetAlbums")]
+    [Route("getalbums")]
     public async Task<IActionResult> GetAllAlbums()
     {
         return Ok(await _albumService.GetList());

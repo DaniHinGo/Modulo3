@@ -3,7 +3,6 @@ using System.Security.Cryptography.X509Certificates;
 using Microsoft.EntityFrameworkCore;
 using Tesla.Data.IRepository;
 using Tesla.Data.Models;
-using Tesla.Data.Repositoty;
 
 namespace Tesla.Data.Repository;
 

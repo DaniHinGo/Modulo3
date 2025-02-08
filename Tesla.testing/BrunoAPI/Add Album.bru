@@ -1,0 +1,20 @@
+meta {
+  name: Add Album
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:5039/api/album/addalbum
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Donde están los ladrones",
+    "year": 2001,
+    "genre": 1,
+    "artistid": 1  
+  }
+}

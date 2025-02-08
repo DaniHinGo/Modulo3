@@ -6,10 +6,10 @@ using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using System.Runtime.InteropServices;
 using Tesla.Data.IRepository;
+using Tesla.Data.Repository;
 using Npgsql;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Tesla.Data.Repositoty;
 
 namespace Tesla.Business.Services;
 
@@ -155,12 +155,7 @@ public class AlbumService : IAlbumService
     {
         return ValidateModel(album);
     }
-
-    public Task<BaseMessage<Album>> AddAlbum()
-    {
-        throw new NotImplementedException();
-    }
-    #endregion
+#endregion
 
 
 }

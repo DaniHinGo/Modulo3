@@ -1,6 +1,6 @@
 using Tesla.Data.Models;
 
-namespace Tesla.Data.Repositoty;
+namespace Tesla.Data.IRepository;
 
 public interface IAlbumRepository<TId, TEntity>
 where TId: struct

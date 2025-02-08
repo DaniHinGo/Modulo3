@@ -16,6 +16,7 @@ public class ArtistService : IArtistService
         _context = context;
         _artistRepository = new ArtistRepository<int, Artist>(_context);
     }
+    
     public async Task<Artist> AddArtist(Artist artist)
     {
         await _artistRepository.AddAsync(artist);
@@ -25,6 +26,6 @@ public class ArtistService : IArtistService
     public async Task<Artist> FindById(int id)
     {
         var artist = await _artistRepository.FindAsync(id);
-        return artist;
+        return  artist;
     }
 }
