@@ -30,7 +30,7 @@ public class AlbumTests
         // Act
         var response = await service.HealthCheckTest();
 
-        // Arrange
+        // Assert
         Assert.AreEqual(response, "OK");
     }
 
@@ -43,7 +43,7 @@ public class AlbumTests
         // Act
         var response = await service.HealthCheckTest(true);
 
-        // Arrange
+        // Assert
         Assert.AreEqual(response, "OK!");
     }
 
@@ -56,7 +56,7 @@ public class AlbumTests
         // Act
         var response = await service.HealthCheckTest(false);
 
-        // Arrange
+        // Assert
         Assert.AreEqual(response, "Not cool");
     }
 
@@ -66,10 +66,10 @@ public class AlbumTests
         // Arrange
         var service = new AlbumService(null);
         var album = new Album(){
-            Name =  "Rude Awakening (RE-MASTERED)",
-            Year = 2025,
+            Name =  "Y ahora qué?",
+            Year = 2001,
             ArtistId = 1,
-            Genre = Genre.Rock,
+            Genre = Genre.Punk,
             Id = 1
         };
 

@@ -6372,11 +6372,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\modulo_3\\Tesla.API\\Tesla.API.csproj",
+      "projectUniqueName": "c:\\modulo_3\\Tesla.API\\Tesla.API.csproj",
       "projectName": "Tesla.API",
-      "projectPath": "C:\\modulo_3\\Tesla.API\\Tesla.API.csproj",
+      "projectPath": "c:\\modulo_3\\Tesla.API\\Tesla.API.csproj",
       "packagesPath": "C:\\Users\\DaniHinGo\\.nuget\\packages\\",
-      "outputPath": "C:\\modulo_3\\Tesla.API\\obj\\",
+      "outputPath": "c:\\modulo_3\\Tesla.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\DaniHinGo\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -6391,8 +6391,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\modulo_3\\Tesla.Business\\Tesla.Business.csproj": {
-              "projectPath": "C:\\modulo_3\\Tesla.Business\\Tesla.Business.csproj"
+            "c:\\modulo_3\\Tesla.Business\\Tesla.Business.csproj": {
+              "projectPath": "c:\\modulo_3\\Tesla.Business\\Tesla.Business.csproj"
             },
             "C:\\modulo_3\\Tesla.Data\\Tesla.Data.csproj": {
               "projectPath": "C:\\modulo_3\\Tesla.Data\\Tesla.Data.csproj"

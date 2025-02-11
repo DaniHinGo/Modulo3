@@ -1,8 +1,6 @@
 C:\modulo_3\Tesla.testing\bin\Debug\net9.0\.msCoverageSourceRootsMapping_Tesla.testing
 C:\modulo_3\Tesla.testing\bin\Debug\net9.0\testhost.dll
 C:\modulo_3\Tesla.testing\bin\Debug\net9.0\testhost.exe
-C:\modulo_3\Tesla.testing\bin\Debug\net9.0\es\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
-C:\modulo_3\Tesla.testing\bin\Debug\net9.0\es\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
 C:\modulo_3\Tesla.testing\bin\Debug\net9.0\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 C:\modulo_3\Tesla.testing\bin\Debug\net9.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
 C:\modulo_3\Tesla.testing\bin\Debug\net9.0\Microsoft.TestPlatform.AdapterUtilities.dll
