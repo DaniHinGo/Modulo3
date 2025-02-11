@@ -42,7 +42,6 @@ where TEntity : BaseEntity<TId>
             
         }
         return null;
-        
     }
 
     public async Task<IEnumerable<Album>> GetAllAsync()
