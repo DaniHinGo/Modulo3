@@ -20,7 +20,6 @@ public class AlbumService : IAlbumService
     public AlbumService(IAlbumRepository<int, Album> albumRepository)
     {
         _albumRepository = albumRepository;
-        //_albumRepository = new AlbumRepository<int, Album>(_context);
     }
 
     public async Task<BaseMessage<Album>> AddAlbum(Album album)
@@ -55,26 +54,28 @@ public class AlbumService : IAlbumService
         
     }
 
+    public async Task<BaseMessage<Album>> GetAllAlbum()
+    {
+        var lista = await _albumRepository.GetAllAlbum();
+        return lista.Any()
+            ? BuildMessage(lista, "", HttpStatusCode.OK, lista.Count)
+            : BuildMessage(lista, "", HttpStatusCode.NotFound, 0);
+    }
+
+    private BaseMessage<Album> BuildMessage(object lista, string v, HttpStatusCode oK, object count)
+    {
+        throw new NotImplementedException();
+    }
+
     public async Task<BaseMessage<Album>> FindById(int id)
     {
-        //Album album;
-
-        // foreach (var item in _listaAlbum)
-        // {
-        //     if(item.Id == id)
-        //     {
-        //         album = item;
-        //     }
-        // }
-
-        // LINQ -> ORM Entity Framework
-        // Dapper -> ORM (Framework Distinto)
-        // IEnumerable
-        // Select * from Album WHERE Id == 1 AND Nombre == Shakira || Producido < COLIOMBIA
-        var lista = _listaAlbum.Where(x => x.Id == id).ToList();
+        Album? album = new ();
+        album = await _albumRepository.FindAsync(id);
+       // var lista = _listaAlbum.Where(x => x.Id == id).ToList();
         
-        return lista.Any() ?  BuildResponse(lista, "", HttpStatusCode.OK, lista.Count) : 
-            BuildResponse(lista, "", HttpStatusCode.NotFound, 0);
+        return album != null ?  
+            BuildResponse(new List<Album>(){album}, "", HttpStatusCode.OK, 1) : 
+            BuildResponse(new List<Album>(), "", HttpStatusCode.NotFound, 0);
     }
 
     public async Task<BaseMessage<Album>> FindByName(string name)
@@ -111,8 +112,6 @@ public class AlbumService : IAlbumService
             ResponseElements = lista.ToList()
         };
     }
-
-   
 
     private BaseMessage<Album> BuildResponse(List<Album> lista, string message = "", HttpStatusCode status = HttpStatusCode.OK, 
         int totalElements = 0)
@@ -155,7 +154,37 @@ public class AlbumService : IAlbumService
     {
         return ValidateModel(album);
     }
-#endregion
+
+    public Task UpdateAlbum(int id, Album album)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task DeleteById(int id)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<BaseMessage<Album>> DeleteAlbum(int id)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<BaseMessage<Album>> FindAlbumByName(string name)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<BaseMessage<Album>> GetAllAlbums()
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<BaseMessage<Album>> FindAlbumById(int id)
+    {
+        throw new NotImplementedException();
+    }
+    #endregion
 
 
 }

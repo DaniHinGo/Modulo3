@@ -32,5 +32,28 @@ namespace TeslaACDC.API.Controllers
             return Ok(result);
         }
 
+        [HttpGet]
+        [Route("GetById")]
+        public async Task<IActionResult> FindAlbumById(int id)
+        {
+            var album = await _albumService.FindAlbumById(id);
+            return Ok(album);
+        }
+
+        [HttpGet]
+        [Route("GetByName")]
+        public async Task<IActionResult> FindAlbumByName(string name)
+        {
+            var album = await _albumService.FindAlbumByName(name);
+            return Ok(album);
+        }
+
+        [HttpDelete]
+        [Route("Delete/{id}")]
+        public async Task<IActionResult> DeleteAlbum(int id)
+        {
+            await _albumService.DeleteAlbum(id);
+            return NoContent();
+        }
     }
 }

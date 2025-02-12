@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Tesla.Business.Interfaces;
+using Tesla.Data.Models;
 
 namespace TeslaACDC.Controllers;
 
@@ -21,4 +22,37 @@ public class ArtistController : ControllerBase
         var artist = await _artistService.FindById(id);
         return Ok(artist);
     }
+
+    [HttpGet]
+    [Route("GetAllArtist")]
+    public async Task<IActionResult> GetAllArtist()
+    {
+        var artist = await _artistService.GetAllArtists();
+        return Ok(artist);
+    }
+
+    [HttpGet]
+    [Route("GetByName")]
+    public async Task<IActionResult> FindArtistByName(string name)
+    {
+        var artist = await _artistService.FindArtistsByName(name);
+        return Ok(artist);
+    }
+
+    [HttpPost]
+    [Route("CreateArtist")]
+    public async Task<IActionResult> AddArtist([FromBody] Artist artist)
+    {
+        var newArtist = await _artistService.AddArtist(artist);
+        return Ok(newArtist);
+    }
+
+    [HttpDelete]
+    [Route("Delete/{id}")]
+    public async Task<IActionResult> DeleteArtist(int id)
+    {
+        await _artistService.DeleteArtist(id);
+        return NoContent();
+    }
+    
 }

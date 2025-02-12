@@ -10,8 +10,6 @@ public class Album : BaseEntity<int>
     public Genre Genre{get;set;} = Genre.Unknown;
     [ForeignKey("Artist")]
     public int ArtistId{get;set;}
-
-
     public virtual Artist? Artist{get;set;}
 }
 public enum Genre

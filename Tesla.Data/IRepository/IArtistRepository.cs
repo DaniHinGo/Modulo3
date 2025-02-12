@@ -8,4 +8,5 @@ where TEntity : BaseEntity<TId>
 {
     Task AddAsync(TEntity artista);
     Task<TEntity> FindAsync(TId id);
+    
 }

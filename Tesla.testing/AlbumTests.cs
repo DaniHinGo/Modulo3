@@ -1,6 +1,9 @@
-﻿using System.Threading.Tasks;
+﻿using System.Net;
+using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NSubstitute;
 using Tesla.Business.Services;
+using Tesla.Data.IRepository;
 using Tesla.Data.Models;
 using Tesla.Data.Repository;
 
@@ -9,9 +12,14 @@ namespace Tesla.Tests;
 [TestClass]
 public class AlbumTests
 {
+    private IAlbumRepository<int, Album> _albumRepository;
+    private readonly Album _correctAlbum;
     public AlbumTests()
     {
-        
+        _albumRepository = Substitute.For<IAlbumRepository<int, Album>>();
+        _correctAlbum = new Album(){
+            Id = 1,
+        };
     }
 
      /* 
@@ -143,6 +151,64 @@ public class AlbumTests
         Assert.IsTrue(response.Contains("El año del disco debe estar entre 1901 y 2025"));
     }
 
-    
+    [TestMethod]
+    public async Task FindById_FindsSomething()
+    {
+        // Arrange
+        //MOCKING 
+        _albumRepository.FindAsync(1).ReturnsForAnyArgs(Task.FromResult<Album>(_correctAlbum));
+        var service = new AlbumService(_albumRepository);
+
+        //Act
+        var result = await service.FindById(5);
+        //Assert
+        Assert.AreEqual(result.TotalElements, 1);
+    }
+
+    [TestMethod]
+    public async Task FindById_NotFound()
+    {
+        // Arrange
+        //MOCKING 
+        _albumRepository.FindAsync(1).ReturnsForAnyArgs(Task.FromResult<Album>(null));
+        var service = new AlbumService(_albumRepository);
+
+        //Act
+        var result = await service.FindById(5);
+        //Assert
+        //Assert.AreEqual(result.StatusCode == HttpStatusCode.NotFound);
+        Assert.IsTrue(result.TotalElements == 0 && result.StatusCode == HttpStatusCode.NotFound);
+    }
+    // [TestMethod]
+    // public async Task FindById_ThrowException()
+    // {
+    //     // Arrange
+    //     // MOCKING
+    //     _albumRepository.FindAsync(1).ThrowsAsyncForAnyArgs(new Exception("ERROR"));
+    //     var service = new AlbumService(_albumRepository);
+
+    //     // Act
+    //     //var result = await service.FindById(5);
+
+    //     // Assert
+    //     //Assert.AreEqual(result.StatusCode, HttpStatusCode.NotFound);
+    //     Assert.ThrowsException<Exception>(async () => await service.FindById(5));
+    // }
+
+    [TestMethod]
+    public async Task AddAlbum_NameIsIncorrect()
+    {
+        // Arrange
+        // MOCKING
+        _albumRepository.AddAsync(new Album());
+        var service = new AlbumService(_albumRepository);
+
+        // Act
+        var result = await service.AddAlbum(_correctAlbum);
+
+        // Assert
+        Assert.AreEqual(result.TotalElements, 0);
+    }
+
 
 }
