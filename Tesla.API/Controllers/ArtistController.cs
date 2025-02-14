@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Tesla.Business.Interfaces;
 using Tesla.Data.Models;
 
-namespace TeslaACDC.Controllers;
+namespace Tesla.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]

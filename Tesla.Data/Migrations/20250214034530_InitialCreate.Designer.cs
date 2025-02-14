@@ -10,8 +10,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Tesla.Data.Migrations
 {
     [DbContext(typeof(NikolaContext))]
-    [Migration("20250207043446_AddForeginKeyToAlbum")]
-    partial class AddForeginKeyToAlbum
+    [Migration("20250214034530_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

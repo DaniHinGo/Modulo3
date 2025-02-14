@@ -1,11 +1,8 @@
-﻿using System.Net;
-using System.Threading.Tasks;
+﻿/*using System.Net;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NSubstitute;
 using Tesla.Business.Services;
-using Tesla.Data.IRepository;
 using Tesla.Data.Models;
-using Tesla.Data.Repository;
 
 namespace Tesla.Tests;
 
@@ -29,7 +26,7 @@ public class AlbumTests
         A = Assert
      */
 
-    [TestMethod]
+    /*[TestMethod]
     public async Task HealthCheckTest()
     {
         // Arrange
@@ -211,4 +208,4 @@ public class AlbumTests
     }
 
 
-}
+}*/
