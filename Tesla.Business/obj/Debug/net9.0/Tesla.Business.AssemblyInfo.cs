@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Tesla.Business")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0357299b6908934e3aef297b8d7fa9239563e66b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+36c346944d2b753ba0daceb0ddd67d0c1ce0d80d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Tesla.Business")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Tesla.Business")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
